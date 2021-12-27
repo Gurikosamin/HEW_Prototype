@@ -45,6 +45,7 @@ private:
     const FLOAT BG_SCROLL_SPEED = 0.001f;
     const FLOAT MAP_OBJ_MOVING_SPEED = 5.0f;
     const FLOAT GOAL_MOVING_SPEED = 5.0f;
+    const FLOAT KTIMER_MOVING_SPEED = 5.0f;
 
     const int PENDULUM_COUNTER_MAX = 100;
 
@@ -155,6 +156,10 @@ public:
     void SetFan(GO_SS_Fan* p) {
         m_pFan = p;
         m_ssCollision.SetFan(p);
+    }
+    void SetKitchenTimer(GO_SS_KitchenTimer* p_KitchenTimer) {
+        m_pKitchenTimer = p_KitchenTimer;
+        m_ssCollision.SetKitchenTimer(p_KitchenTimer);
     }
 };
 
